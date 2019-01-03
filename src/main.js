@@ -46,9 +46,7 @@ ______________________________
 `; //The text that displays to console, when client is ready.
     Console.log(text);
 });
-    if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
-    if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
-    if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
+    
 client.on("guildMemberAdd", (member) => {
         //All choices are optional here. Bot wont work if the channel ID's are wrong. How to properly get ID's read in README.md 
         try {
@@ -58,7 +56,10 @@ client.on("guildMemberAdd", (member) => {
         
         }
         catch (e) {
-        Console.log(e);
+         if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
+          if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
+           if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
+        
         }
   });
 client.on("guildMemberRemove", (member) => {
@@ -70,7 +71,10 @@ client.on("guildMemberRemove", (member) => {
         
         }
         catch (e) {
-        Console.log(e);
+          if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
+    if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
+    if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
+        
         }
 });
      try {
