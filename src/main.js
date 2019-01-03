@@ -16,9 +16,9 @@ class bot {
  * @param {string} users
  * @param {string} bots 
  */
-    this.options.total = null;
-    this.options.users = null;
-    this.options.bots = null;
+    if (!this.options.total) {throw new Error('Please specify "Total Members" channel ID');this.options.total = null;}
+    if (!this.options.users) {throw new Error('Please specify "Member Count" channel ID');this.options.users = null;}
+    if (!this.options.bots) {throw new Error('Please specify "Bot Count" channel ID');this.options.bots = null;}
   
     const client = new Discord.Client(); 
 
@@ -47,7 +47,7 @@ ______________________________
     Console.log(text);
 });
     if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
-    if (!client.channels.get(this.options.humans) || isNaN(this.options.humans)) throw new Error('Please specify a valid "Member Count" channel id.')
+    if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
     if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
 client.on("guildMemberAdd", (member) => {
         //All choices are optional here. Bot wont work if the channel ID's are wrong. How to properly get ID's read in README.md 
