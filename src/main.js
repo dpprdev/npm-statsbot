@@ -27,12 +27,12 @@ class bot {
     client.on("ready", () => {
 
     if (client.guilds.size < 1) {
-        Console.log("The bot is not in any guild.");
+        throw new Error("The bot is not in any guild.");
         process.exit(0);
         return;
     } //Shutdowns, if bot is not in any guild
       if (client.guilds.size > 1) {
-        Console.log("The bot is in more than 1 guild.");
+        throw new RangeError("The bot is in more than 1 guild.");
         process.exit(0);
         return;
     } //Shutdowns, if bot is in more than 1  guild
