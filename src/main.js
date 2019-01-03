@@ -21,8 +21,9 @@ class bot {
     this.options.bots = null;
   
     const client = new Discord.Client(); 
-    //if (!client.token) throw new Error('Please insert a valid token!')
+
     const Console = console;
+    if (!client.token) throw new Error('Please insert a valid token!')
     client.on("ready", () => {
 
     if (client.guilds.size < 1) {
@@ -30,6 +31,11 @@ class bot {
         process.exit(0);
         return;
     } //Shutdowns, if bot is not in any guild
+      if (client.guilds.size > 1) {
+        Console.log("The bot is in more than 1 guild.");
+        process.exit(0);
+        return;
+    } //Shutdowns, if bot is in more than 1  guild
     const text = `
 ______________________________
 Ready since: ${moment(Date.now()).format("dddd, MMMM do YYYY, HH:mm:ss")}
@@ -40,6 +46,9 @@ ______________________________
 `; //The text that displays to console, when client is ready.
     Console.log(text);
 });
+    if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
+    if (!client.channels.get(this.options.humans) || isNaN(this.options.humans)) throw new Error('Please specify a valid "Member Count" channel id.')
+    if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
 client.on("guildMemberAdd", (member) => {
         //All choices are optional here. Bot wont work if the channel ID's are wrong. How to properly get ID's read in README.md 
         try {
