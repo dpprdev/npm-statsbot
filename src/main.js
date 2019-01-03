@@ -16,12 +16,12 @@ class bot {
  * @param {string} users
  * @param {string} bots 
  */
-    this.options.total = 'insert channel 1 id here';
-    this.options.users = 'insert channel 2 id here';
-    this.options.bots = 'insert channel 3 id here';
-  }
-}
-    const client = new Discord.Client(); //The bot itself.
+    this.options.total = null;
+    this.options.users = null;
+    this.options.bots = null;
+  
+    const client = new Discord.Client(); 
+    //if (!client.token) throw new Error('Please insert a valid token!')
     const Console = console;
     client.on("ready", () => {
 
@@ -67,7 +67,9 @@ client.on("guildMemberRemove", (member) => {
      try {
      client.login(this.token);
     }  catch (e) {
-      if (e)  Console.log('Invalid token was provided.')
+      if (e) throw new Error('Please insert a valid token!');
     }
+}
+}  
 
 module.exports = bot;
