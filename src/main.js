@@ -16,10 +16,7 @@ class bot {
  * @param {string} users
  * @param {string} bots 
  */
-    /*async function _kill(error){
-    await throw new Error(error);
-    await process.exit(0);
-    }*/
+    
     if (!this.options.total) {throw new Error('Please specify "Total Members" channel ID');this.options.total = null;}
     if (!this.options.users) {throw new Error('Please specify "Member Count" channel ID');this.options.users = null;}
     if (!this.options.bots) {throw new Error('Please specify "Bot Count" channel ID');this.options.bots = null;}
