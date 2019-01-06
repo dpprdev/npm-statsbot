@@ -4,6 +4,7 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdpprdev%2Fstatsbot.svg?type=shield)](https://github.com/dpprdev/statsbot)
 [![David-DM Badge](https://david-dm.org/dpprdev/npm-statsbot.svg)](https://david-dm.org/dpprdev/npm-statsbot)
 [![Known Vulnerabilities](https://snyk.io/test/github/dpprdev/npm-statsbot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dpprdev/npm-statsbot?targetFile=package.json)
+[![](https://img.shields.io/npm/dt/statsbot.svg)](https://www.npmjs.com/package/statsbot)
 
 <hr>
 ---
