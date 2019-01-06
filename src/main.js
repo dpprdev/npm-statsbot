@@ -24,7 +24,6 @@ class bot {
     const client = new Discord.Client(); 
 
     const Console = console;
-    if (!client.token) throw new Error('Please insert a valid token!')
     client.on("ready", () => {
 
     if (client.guilds.size < 1) {
