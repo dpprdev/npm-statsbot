@@ -43,7 +43,7 @@ class bot {
             } //Shutdowns, if bot is in more than 1  guild
             const text = `
 ______________________________
-Ready since: ${moment(Date.now()).format("dddd, MMMM do YYYY, HH:mm:ss")}
+Ready since: ${moment(Date.now()).format("dddd, MMMM Do YYYY, HH:mm:ss")}
 Server: ${client.guilds.first().name}
 Total server members: ${client.guilds.first().memberCount}
 Working On: https://github.com/dpprdev/npm-statsbot/
