@@ -17,9 +17,7 @@ Package, that allows you make powerful Stats-Bot within 2 lines of code!
 | Value | Meaning | Example |
 | :---: | :---: | :---: |
 | total | Total Members channel ID | 482602910728060932 |
-| :---: | :---: | :---: |
 | users | Users channel ID | 482602910728060932 |
-| :---: | :---: | :---: |
 | bots | Bots channel ID | 482602910728060932 |
 
 <hr>
