@@ -37,7 +37,7 @@ ______________________________
 Ready since: ${moment(Date.now()).format("dddd, MMMM do YYYY, HH:mm:ss")}
 Server: ${client.guilds.first().name}
 Total server members: ${client.guilds.first().memberCount}
-Credits: https://github.com/dpprdev/statsbot/
+Working On: https://github.com/dpprdev/npm-statsbot/
 ______________________________
 `; //The text that displays to console, when client is ready.
     Console.log(text);
