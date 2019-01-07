@@ -18,16 +18,16 @@ class bot {
          */
 
         if (!this.options.total) {
-            throw new Error('Please specify "Total Members" channel ID');
             this.options.total = null;
+            throw new Error("Please specify \"Total Members\" channel ID");
         }
         if (!this.options.users) {
-            throw new Error('Please specify "Member Count" channel ID');
             this.options.users = null;
+            throw new Error("Please specify \"Member Count\" channel ID");
         }
         if (!this.options.bots) {
-            throw new Error('Please specify "Bot Count" channel ID');
             this.options.bots = null;
+            throw new Error("Please specify \"Bot Count\" channel ID");
         }
 
         const client = new Discord.Client();
@@ -60,9 +60,9 @@ ______________________________
                 member.guild.channels.get(this.options.bots).setName(`Bots: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}
 
             } catch (e) {
-                if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
-                if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
-                if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
+                if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error("Please specify a valid \"Total Members\" channel id.");
+                if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error("Please specify a valid \"Member Count\" channel id.");
+                if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error("Please specify a valid \"Bot Count\" channel id.");
 
             }
         });
@@ -74,16 +74,16 @@ ______________________________
                 member.guild.channels.get(this.options.bots).setName(`Bots: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}'s
 
             } catch (e) {
-                if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error('Please specify a valid "Total Members" channel id.')
-                if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error('Please specify a valid "Member Count" channel id.')
-                if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error('Please specify a valid "Bot Count" channel id.')
+                if (!client.channels.get(this.options.total) || isNaN(this.options.total)) throw new Error("Please specify a valid \"Total Members\" channel id.");
+                if (!client.channels.get(this.options.users) || isNaN(this.options.users)) throw new Error("Please specify a valid \"Member Count\" channel id.");
+                if (!client.channels.get(this.options.bots) || isNaN(this.options.bots)) throw new Error("Please specify a valid \"Bot Count\" channel id.");
 
             }
         });
         try {
             client.login(this.token);
         } catch (e) {
-            if (e) throw new Error('Please insert a valid token!');
+            if (e) throw new Error("Please insert a valid token!");
         }
     }
 }
