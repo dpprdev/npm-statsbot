@@ -6,12 +6,12 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/dpprdev/npm-statsbot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dpprdev/npm-statsbot?targetFile=package.json)
 [![](https://img.shields.io/npm/dt/statsbot.svg)](https://www.npmjs.com/package/statsbot)
 
-<hr>
+
 ---
 Powered by Discord.js.
 Package, that allows you make powerful Stats-Bot within 2 lines of code!
 ---
-<hr>
+
 
 #### Values
 
