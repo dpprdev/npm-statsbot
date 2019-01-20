@@ -30,7 +30,7 @@ class bot {
             throw new Error("Please specify \"Bot Count\" channel ID");
         }
 
-        const client = new Discord.Client();
+        const client = new Discord.Client({fetchAllMembers: true});
 
         const Console = console;
         client.on("ready", () => {
@@ -56,8 +56,8 @@ ______________________________
             //All choices are optional here. Bot wont work if the channel ID's are wrong. How to properly get ID's read in README.md 
             try {
                 member.guild.channels.get(this.options.total).setName(`Total Members: ${member.guild.memberCount}`); // You can change this text, but still keep ${guild.memberCount}, as it defines total members.
-                member.guild.channels.get(this.options.users).setName(`Users: ${member.guild.members.filter((m) => !m.user.bot).size}`); // This text is also changeable, still keep the code in ${}
-                member.guild.channels.get(this.options.bots).setName(`Bots: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}
+                member.guild.channels.get(this.options.users).setName(`User Count: ${member.guild.members.filter((m) => !m.user.bot).size}`); // This text is also changeable, still keep the code in ${}
+                member.guild.channels.get(this.options.bots).setName(`Bot Count: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}
 
             } catch (e) {
                 if (!client.channels.get(this.options.total) || isNaN(this.options.total)) {
@@ -76,8 +76,8 @@ ______________________________
             //All choices are optional here. Bot wont work if the channel ID's are wrong. How to properly get ID's read in README.md 
             try {
                 member.guild.channels.get(this.options.total).setName(`Total Members: ${member.guild.memberCount}`); // You can change this text, but still keep ${guild.memberCount}, as it defines total members.
-                member.guild.channels.get(this.options.users).setName(`Users: ${member.guild.members.filter((m) => !m.user.bot).size}`); // This text is also changeable, still keep the code in ${}'s
-                member.guild.channels.get(this.options.bots).setName(`Bots: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}'s
+                member.guild.channels.get(this.options.users).setName(`User Count: ${member.guild.members.filter((m) => !m.user.bot).size}`); // This text is also changeable, still keep the code in ${}'s
+                member.guild.channels.get(this.options.bots).setName(`Bot Count: ${member.guild.members.filter((m) => m.user.bot).size}`); // This text is also changeable, still keep the code in ${}'s
 
             } catch (e) {
                 if (!client.channels.get(this.options.total) || isNaN(this.options.total)) {
