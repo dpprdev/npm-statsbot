@@ -5,7 +5,7 @@
 [![David-DM Badge](https://david-dm.org/dpprdev/npm-statsbot.svg)](https://david-dm.org/dpprdev/npm-statsbot)
 [![Known Vulnerabilities](https://snyk.io/test/github/dpprdev/npm-statsbot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dpprdev/npm-statsbot?targetFile=package.json)
 [![](https://img.shields.io/npm/dt/statsbot.svg)](https://www.npmjs.com/package/statsbot)
-
+[![](https://img.shields.io/github/stars/dpprdev/npm-statsbot.svg?label=Stars&style=social)](https://github.com/dpprdev/npm-statsbot)
 
 ---
 Powered by Discord.js.
