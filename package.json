@@ -1,6 +1,6 @@
 {
   "name": "statsbot",
-  "version": "0.0.1",
+  "version": "v1.0.0",
   "description": "Powered on Discord.js working Stats-Bot.",
   "scripts": {
     "start": "node index.js"
@@ -15,5 +15,15 @@
   "repository": {
     "url": "https://github.com/dpprdev/npm-statsbot"
   },
+  "keywords": [
+    "discord",
+    "bot",
+    "stats",
+    "bot",
+    "discord bot",
+    "statsbot",
+    "js",
+    "discord.js"
+  ],
   "license": "MIT"
 }
